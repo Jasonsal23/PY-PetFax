@@ -1,0 +1,33 @@
+    {% extends "index-base.html" %}
+
+    {% block title %} Add a pet to the fax machine {% endblock %}
+    
+    {% block body %}
+    <div class="container">
+        <h1>Submit Fax</h1>
+        <div class="callout">
+            If your have an animal you want to fax put its info here
+        </div>
+        <div class="facts-container">
+            <form action="/facts" method="POST">
+                <label for="submitter">
+                    <h2>Name:</h2>
+                </label>
+                <input type="text" name="submitter">
+                <br>
+                <label for="fact">
+                    <h2>Fact:</h2>
+                </label>
+                <textarea name="fact" cols="30" rows="10"></textarea>
+                <br>
+                <label for="photo">
+                    <h2>Photo:</h2>
+                </label>
+                <input type="text" name="photo">
+                <br>
+                <input type="submit" value="Submit the Fact">
+            </form>
+        </div>
+        <a href="/pets">&lt;&lt; Go back</a>
+    </div>
+    {% endblock %}

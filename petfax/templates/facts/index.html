@@ -1,0 +1,21 @@
+{% extends "index-base.html" %}
+
+{% block title %} List of Faxed Animals {% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>User Facts</h1>
+        {% for fact in facts %}
+            <div class="fact-container">
+                <div class="photo">
+                    <img src="{{ fact.photo }}" alt="{{ fact.photo }}">
+                </div>
+                <h4>Submitted By: {{ fact.submitter }}</h4>
+                <div class="fact">
+                    {{ fact.fact }}
+                </div>
+
+            </div>
+    </div>  
+    <a href="/facts/new">&lt;&lt; Go Back</a>
+{% endblock %}
